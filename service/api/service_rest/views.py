@@ -8,14 +8,14 @@ from .models import AutomobileVO, Appointment, Technician
 @require_http_methods(["GET", "POST"])
 def tech_list(request):
     if request.method == "GET":
-        techs = Technician.objects.all()
-        return JsonResponse({"techs": techs}, encoder=TechEncoder)
+        technicians = Technician.objects.all()
+        return JsonResponse({"techs": technicians}, encoder=TechEncoder)
     else:
         try:
             content = json.loads(request.body)
-            tech = Technician.objects.create(**content)
+            technician = Technician.objects.create(**content)
             return JsonResponse(
-                tech,
+                technician,
                 encoder=TechEncoder,
                 safe=False,
             )
@@ -24,9 +24,9 @@ def tech_list(request):
             response.status_code = 400
             return response
 
-@require_http_methods(["DELETE","GET"])
+@require_http_methods(["DELETE", "GET"])
 def show_tech(request, id):
-    if request.method =="GET":
+    if request.method == "GET":
         technician = Technician.objects.get(id=id)
         return JsonResponse(
             {"technician": technician},

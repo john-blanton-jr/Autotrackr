@@ -1,3 +1,12 @@
+import React from 'react';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+} from 'react-router-dom';
+
 function MainPage() {
   return (
     <div className="px-4 py-5 my-5 text-center">
@@ -6,6 +15,9 @@ function MainPage() {
         <p className="lead mb-4">
           The premiere solution for automobile dealership
           management!
+          <div className="d-grip gap-2 col-6 mx-auto">
+              <Link to="api/appointments/new" className="btn btn-outline-success"> Add new appt</Link>
+          </div>
         </p>
       </div>
     </div>

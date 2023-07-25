@@ -5,8 +5,10 @@ from .models import Appointment, Technician, AutomobileVO
 class TechEncoder(ModelEncoder):
     model = Technician
     properties = [
-        'name',
+        'first_name',
+        'last_name',
         'employee_id',
+        'id',
     ]
 
 

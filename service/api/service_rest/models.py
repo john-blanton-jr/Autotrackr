@@ -7,13 +7,14 @@ class AutomobileVO(models.Model):
     vin = models.CharField(max_length=17, unique=True)
     color = models.CharField(max_length=50)
     year = models.PositiveSmallIntegerField()
-    model = models.CharField(max_length=150)
+    model = models.CharField(max_length=200)
     sold = models.BooleanField(default=False, null=True, blank=True)
 
 
 class Technician(models.Model):
-    name = models.CharField(max_length=200)
-    employee_id = models.IntegerField(unique=True)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    employee_id = models.CharField(max_length=200)
 
 
 class Appointment(models.Model):

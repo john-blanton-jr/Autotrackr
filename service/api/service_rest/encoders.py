@@ -15,10 +15,9 @@ class TechEncoder(ModelEncoder):
 class AutoVOEncoder(ModelEncoder):
     model = AutomobileVO
     properties = [
-        "vin",
-        "year",
-        "model",
-        "color",
+        'vin',
+        'sold',
+
     ]
 
 

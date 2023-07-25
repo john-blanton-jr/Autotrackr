@@ -30,7 +30,7 @@ function AppointmentList() {
 
     return (
         <div>
-            <h1>Appointments</h1>
+            <h1 style={{ textAlign: "center" }}>Appointments</h1>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -58,12 +58,12 @@ function AppointmentList() {
                                 <td>{appointments.technician.first_name} {appointments.technician.last_name}</td>
                                 <td>{appointments.reason}</td>
                                 <td>
-                                    <button className="btn btn-success" onClick={() => completeAppointment(appointments.id)}>Complete</button>
+                                    <button className="btn btn-success" onClick={() => completeAppointment(appointments.id)}>Finished</button>
                                     <button className="btn btn-danger" onClick={() => cancelAppointment(appointments.id)}>Cancel </button>
                                 </td>
                             </tr>
                 );
-                
+
                     })}
             </tbody>
         </table>

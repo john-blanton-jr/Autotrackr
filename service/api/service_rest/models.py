@@ -5,9 +5,6 @@ from django.db import models
 
 class AutomobileVO(models.Model):
     vin = models.CharField(max_length=17, unique=True)
-    color = models.CharField(max_length=50)
-    year = models.PositiveSmallIntegerField()
-    model = models.CharField(max_length=200)
     sold = models.BooleanField(default=False, null=True, blank=True)
 
 

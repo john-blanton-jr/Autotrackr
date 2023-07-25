@@ -16,7 +16,7 @@ function TechList() {
 
     return (
         <div>
-            <h1>Technicians</h1>
+            <h1 style={{ textAlign: "center" }}>Technicians</h1>
             <table className="table table-striped">
                 <thead>
                     <tr>

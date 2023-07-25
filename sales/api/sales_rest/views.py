@@ -15,14 +15,17 @@ class SalespersonEncoder(ModelEncoder):
         "id"
     ]
 
+
 class CustomerEncoder(ModelEncoder):
     model = Customer
     properties = [
         "first_name",
         "last_name",
         "address",
+        "phone_number"
         "id"
     ]
+
 
 class AutomobileVOEncoder(ModelEncoder):
     model = AutomobileVO

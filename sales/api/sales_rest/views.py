@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Salesperson, Customer
+from .models import Salesperson, Customer, Sale, AutomobileVO
 from common.json import ModelEncoder
 from django.views.decorators.http import require_http_methods
 from django.http import JsonResponse
@@ -23,6 +23,30 @@ class CustomerEncoder(ModelEncoder):
         "address",
         "id"
     ]
+
+class AutomobileVOEncoder(ModelEncoder):
+    model = AutomobileVO
+    properties = [
+        "vin",
+        "sold",
+        "id"
+    ]
+
+
+class SaleEncoder(ModelEncoder):
+    model = Sale
+    properties = [
+        "price",
+        "automobile",
+        "salesperson",
+        "customer",
+        "id"
+    ]
+    encoders = {
+        "automobile": AutomobileVO(),
+        "salesperson": SalespersonEncoder(),
+        "customer": CustomerEncoder()
+    }
 
 
 @require_http_methods(["GET", "POST"])
@@ -103,6 +127,48 @@ def api_show_customer(request, id):
     if request.method == 'DELETE':
         try:
             count, _ = Customer.objects.get(id=id).delete()
+            return JsonResponse({"deleted": count > 0})
+        except:
+            return JsonResponse(
+                {"message": "Invalid ID"},
+                status=400,
+                )
+
+
+@require_http_methods(["GET", "POST"])
+def api_list_sales(request):
+    if request.method == "GET":
+        try:
+            sale = Sale.objects.all()
+            return JsonResponse(
+                {"sales": sale},
+                encoder=SaleEncoder
+            )
+        except:
+            return JsonResponse(
+                {"message": "Bad Request"},
+                status=400,
+                )
+    else:
+        content = json.loads(request.body)
+        try:
+            customer = Sale.objects.create(**content)
+            return JsonResponse(
+                customer,
+                encoder=SaleEncoder,
+                safe=False,
+            )
+        except Sale.DoesNotExist:
+            return JsonResponse(
+                {"message": "Bad Request"},
+                status=400,
+            )
+
+@require_http_methods(["DELETE"])
+def api_show_sale(request, id):
+    if request.method == 'DELETE':
+        try:
+            count, _ = Sale.objects.get(id=id).delete()
             return JsonResponse({"deleted": count > 0})
         except:
             return JsonResponse(

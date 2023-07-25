@@ -19,6 +19,13 @@ function App() {
           <Route path="/service_history" element={<ServiceHistory />} />
           <Route path="/technicians/" element={<TechList />} />
           <Route path="/technicians/new" element={<TechForm />} />
+          <Route path="salespeople" element={<SalespeopleList />} />
+          <Route path="salespeople/create" element={<SalespersonForm />} />
+          <Route path="customers" element={<CustomerList />} />
+          <Route path="customers/create" element={<CustomerForm />} />
+          <Route path="sales" element={<SalesList />} />
+          <Route path="sales/create" element={<SalesForm />} />
+          <Route path="sales/history" element={<SalespersonHistory />} />
         </Routes>
       </div>
     </BrowserRouter>

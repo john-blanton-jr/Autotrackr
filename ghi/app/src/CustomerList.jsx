@@ -12,9 +12,6 @@ function CustomerList(props) {
       }
     }
 
-    useEffect(() => {
-      fetchCustomers();
-    }, [])
     const deleteCustomer = async (id) => {
       const response = await fetch(`http://localhost:8090/api/customers/${id}`, {
           method: 'DELETE'
@@ -23,6 +20,10 @@ function CustomerList(props) {
         fetchCustomers();
       }
   }
+
+    useEffect(() => {
+      fetchCustomers();
+    }, [])
 
     return (
       <table className="table table-striped">

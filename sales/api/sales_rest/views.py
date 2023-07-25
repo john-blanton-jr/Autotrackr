@@ -46,7 +46,7 @@ class SaleEncoder(ModelEncoder):
         "id"
     ]
     encoders = {
-        "automobile": AutomobileVO(),
+        "automobile": AutomobileVOEncoder(),
         "salesperson": SalespersonEncoder(),
         "customer": CustomerEncoder()
     }
@@ -154,18 +154,34 @@ def api_list_sales(request):
                 )
     else:
         content = json.loads(request.body)
+        vin = content["vin"]
+        customer_id = content["customer"]
+        salesperson_id = content["salesperson"]
         try:
-            customer = Sale.objects.create(**content)
-            return JsonResponse(
-                customer,
-                encoder=SaleEncoder,
-                safe=False,
-            )
+            customer = Customer.objects.get(id=customer_id)
+            salesperson = Salesperson.objects.get(id=salesperson_id)
+            automobile = AutomobileVO.objects.get(vin=vin)
+            automobile.sold = True
+
+            del content["vin"]
+            content["customer"] = customer
+            content["salesperson"] = salesperson
+            content["automobile"] = automobile
+            print(automobile.sold)
         except Sale.DoesNotExist:
             return JsonResponse(
                 {"message": "Bad Request"},
                 status=400,
             )
+
+        sale = Sale.objects.create(**content)
+        return JsonResponse(
+            sale,
+            encoder=SaleEncoder,
+            safe=False,
+        )
+
+
 
 @require_http_methods(["DELETE"])
 def api_show_sale(request, id):

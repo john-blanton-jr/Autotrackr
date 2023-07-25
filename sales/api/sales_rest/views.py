@@ -22,7 +22,7 @@ class CustomerEncoder(ModelEncoder):
         "first_name",
         "last_name",
         "address",
-        "phone_number"
+        "phone_number",
         "id"
     ]
 

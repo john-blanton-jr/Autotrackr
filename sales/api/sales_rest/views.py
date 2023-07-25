@@ -161,7 +161,6 @@ def api_list_sales(request):
             customer = Customer.objects.get(id=customer_id)
             salesperson = Salesperson.objects.get(id=salesperson_id)
             automobile = AutomobileVO.objects.get(vin=vin)
-            automobile.sold = True
 
             del content["vin"]
             content["customer"] = customer

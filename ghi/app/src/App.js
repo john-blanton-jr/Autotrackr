@@ -6,6 +6,13 @@ import TechList from './TechList'
 import AppointmentList from './AppointmentList'
 import AppointmentForm from './AppointmentForm'
 import ServiceHistory from './ServiceHistory';
+import SalespeopleList from './SalespeopleList';
+import SalespersonForm from './SalespersonForm';
+import CustomerList from './CustomerList';
+import CustomerForm from './CustomerForm';
+import SalesList from './SalesList';
+import SalesForm from './SalesForm';
+import SalespersonHistory from './SalespersonHistory';
 
 function App() {
   return (

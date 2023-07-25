@@ -16,7 +16,7 @@ function SalesForm(props){
 
     if (response.ok) {
       const data = await response.json()
-      setVins(data.autos)
+      setVins(data.autos.filter(auto => auto.sold === false))
     }
     else {
       console.error(response);
@@ -24,7 +24,7 @@ function SalesForm(props){
   }
 
 
-  const fetchSalesPeople = async () => {
+  const fetchSalespeople = async () => {
     const url = 'http://localhost:8090/api/salespeople/'
     const response = await fetch(url)
 
@@ -71,6 +71,23 @@ function SalesForm(props){
     setCustomer(value);
   }
 
+  const handleSoldStatus = async (vin) => {
+    const url = `http://localhost:8100/api/automobiles/${vin}/`;
+    const fetchConfig = {
+      method: "put",
+      body: JSON.stringify({ sold: true }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const response = await fetch(url, fetchConfig);
+        if (response.ok) {
+        console.log(response);
+        }
+    }
+
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     const data = {}
@@ -91,13 +108,18 @@ function SalesForm(props){
     const saleResponse = await fetch(saleUrl, fetchConfig)
     if (saleResponse.ok) {
       const response = await saleResponse.json()
+      handleSoldStatus(vin)
       console.log(response);
     }
   }
 
+
+
+
+
   useEffect(() => {
     fetchVin()
-    fetchSalesPeople()
+    fetchSalespeople()
     fetchCustomers()
   }, [])
 

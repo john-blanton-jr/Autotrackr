@@ -89,7 +89,8 @@ const AppointmentForm = () => {
 								onChange={handleFormChange}
                                 value={formData.customer_name}
                                 placeholder="Customer Name"
-                                required type="text"
+                                required
+								type="text"
                                 name="customer_name" id="customer_name"
                                 className="form-control" />
                             <label htmlFor="customer_name">Customer Name</label>
@@ -119,7 +120,7 @@ const AppointmentForm = () => {
 							/>
 							<label htmlFor="Date Time">Time</label>
 						</div>
-						<div className="mb-3">
+						<div className=" mb-3">
 							<select
 								onChange={handleFormChange}
 								value={formData.technician}
@@ -130,7 +131,7 @@ const AppointmentForm = () => {
 								<option value="">Select a Technician</option>
 								{techs.map((technician) => {
 									return (
-										<option key={technician.employee_id} value={technician.employee_id}>
+										<option key={technician.id} value={technician.id}>
 											{technician.first_name}
 										</option>
 									);
@@ -141,7 +142,7 @@ const AppointmentForm = () => {
 							<label htmlFor="reason">Reason</label>
 							<textarea
 								onChange={handleFormChange}
-								
+								value={formData.reason}
 								id="reason"
 								rows="1"
 								name="reason"

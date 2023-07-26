@@ -15,9 +15,6 @@ function MainPage() {
         <p className="lead mb-4">
           The premiere solution for automobile dealership
           management!
-          <div className="d-grip gap-2 col-6 mx-auto">
-              <Link to="api/appointments/new" className="btn btn-outline-success"> Add new appt</Link>
-          </div>
         </p>
       </div>
     </div>

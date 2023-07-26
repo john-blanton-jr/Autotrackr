@@ -13,7 +13,7 @@ function AppointmentList() {
         getData()
     }, [])
 
-    const completeAppointment = (id) => {
+    const finishAppointment = (id) => {
         const updatedAppointments = appointments.filter(appointment => appointment.id !== id);
         setAppointments(updatedAppointments);
     }
@@ -58,7 +58,7 @@ function AppointmentList() {
                                 <td>{appointments.technician.first_name} {appointments.technician.last_name}</td>
                                 <td>{appointments.reason}</td>
                                 <td>
-                                    <button className="btn btn-success" onClick={() => completeAppointment(appointments.id)}>Finished</button>
+                                    <button className="btn btn-success" onClick={() => finishAppointment(appointments.id)}>Finish</button>
                                     <button className="btn btn-danger" onClick={() => cancelAppointment(appointments.id)}>Cancel </button>
                                 </td>
                             </tr>

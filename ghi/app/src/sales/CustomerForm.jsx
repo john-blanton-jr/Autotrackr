@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 function CustomerForm(){
-
   const defaultObj = {
     firstName: "",
     lastName: "",

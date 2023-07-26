@@ -18,7 +18,7 @@ def api_list_salespeople(request):
             return JsonResponse(
                 {"message": "Bad Request"},
                 status=400,
-                )
+            )
     else:
         content = json.loads(request.body)
         try:
@@ -45,7 +45,7 @@ def api_show_salesperson(request, id):
             return JsonResponse(
                 {"message": "Invalid ID"},
                 status=400,
-                )
+            )
 
 
 @require_http_methods(["GET", "POST"])
@@ -61,7 +61,7 @@ def api_list_customers(request):
             return JsonResponse(
                 {"message": "Bad Request"},
                 status=400,
-                )
+            )
     else:
         content = json.loads(request.body)
         try:
@@ -88,7 +88,7 @@ def api_show_customer(request, id):
             return JsonResponse(
                 {"message": "Invalid ID"},
                 status=400,
-                )
+            )
 
 
 @require_http_methods(["GET", "POST"])
@@ -104,7 +104,7 @@ def api_list_sales(request):
             return JsonResponse(
                 {"message": "Bad Request"},
                 status=400,
-                )
+            )
     else:
         content = json.loads(request.body)
         vin = content["vin"]
@@ -144,4 +144,4 @@ def api_show_sale(request, id):
             return JsonResponse(
                 {"message": "Invalid ID"},
                 status=400,
-                )
+            )

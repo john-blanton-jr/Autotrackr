@@ -2,32 +2,31 @@ import React, {useState} from 'react';
 
 
 function SalespersonForm(){
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [employeeId, setEmployeeId] = useState('')
 
-  const HandleFirstNameChange = (event) => {
-    const value = event.target.value;
-    setFirstName(value);
+
+  const defaultObj = {
+    firstName: '',
+    lastName: '',
+    employeeId: '',
   }
 
-  const HandleLastNameChange = (event) => {
-    const value = event.target.value;
-    setLastName(value);
-  }
+  const [state, setState] = useState(defaultObj)
 
-  const HandleEmployeeIdChange = (event) => {
-    const value = event.target.value;
-    setEmployeeId(value);
+  const handleChange = evt => {
+    const value = evt.target.value
+    setState({
+      ...state,
+      [evt.target.name]: value,
+    })
   }
 
   const HandleSubmit= async (event) => {
     event.preventDefault()
 
     const data = {}
-    data.first_name = firstName
-    data.last_name = lastName
-    data.employee_id = employeeId
+    data.first_name = state.firstName
+    data.last_name = state.lastName
+    data.employee_id = state.employeeId
 
     const hatUrl = "http://localhost:8090/api/salespeople/";
     const fetchConfig = {
@@ -39,9 +38,7 @@ function SalespersonForm(){
     };
     const response = await fetch(hatUrl, fetchConfig);
     if (response.ok) {
-      setFirstName("");
-      setLastName("");
-      setEmployeeId("");
+      setState(defaultObj)
     }
   };
 
@@ -54,8 +51,8 @@ function SalespersonForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="First Name"
-              onChange={HandleFirstNameChange}
-              value={firstName}
+              onChange={handleChange}
+              value={state.firstName}
               required
               type="text"
               name="firstName"
@@ -67,8 +64,8 @@ function SalespersonForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="Last Name"
-              onChange={HandleLastNameChange}
-              value={lastName}
+              onChange={handleChange}
+              value={state.lastName}
               required
               type="text"
               name="lastName"
@@ -80,8 +77,8 @@ function SalespersonForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="Employee Id"
-              value={employeeId}
-              onChange={HandleEmployeeIdChange}
+              value={state.employeeId}
+              onChange={handleChange}
               required
               type="text"
               className="form-control"

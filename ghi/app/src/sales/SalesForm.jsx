@@ -3,13 +3,25 @@ import React, {useEffect, useState} from 'react';
 
 function SalesForm(props){
   const [vins, setVins] = useState([])
-  const [vin, setVin] = useState('')
   const [salespeople, setSalespeople] = useState([])
-  const [salesperson, setSalesperson] = useState('')
   const [customers, setCustomers] = useState([])
-  const [customer, setCustomer] = useState('')
-  const [price, setPrice] = useState('')
 
+  const defaultObj = {
+    vin: '',
+    salesperson: '',
+    customer: '',
+    price: ''
+  }
+
+  const [state, setState] = useState(defaultObj)
+
+  const handleChange = evt => {
+    const value = evt.target.valuehandleChange
+    setState({
+      ...state,
+      [evt.target.name]: value,
+    })
+  }
 
   const fetchVin = async () => {
     const url = 'http://localhost:8100/api/automobiles/'
@@ -17,7 +29,7 @@ function SalesForm(props){
 
     if (response.ok) {
       const data = await response.json()
-      setVins(data.autos.filter(auto => auto.sold === false))
+      setVins(data.autos.filter(auto => auto.sold == false))
     }
     else {
       console.error(response);
@@ -51,26 +63,6 @@ function SalesForm(props){
   }
 
 
-  const handlePriceChange = (event) => {
-    const value = event.target.value;
-    setPrice(value);
-  }
-
-  const handleVinChange = (event) => {
-    const value = event.target.value;
-    setVin(value);
-  }
-
-  const handleSalespersonChange = (event) => {
-    const value = event.target.value;
-    setSalesperson(value);
-  }
-
-  const handleCustomerChange = (event) => {
-    const value = event.target.value;
-    setCustomer(value);
-  }
-
   const handleSoldStatus = async (vin) => {
     const url = `http://localhost:8100/api/automobiles/${vin}/`;
     const fetchConfig = {
@@ -92,10 +84,10 @@ function SalesForm(props){
   const handleSubmit = async (event) => {
     event.preventDefault()
     const data = {}
-    data.vin = vin
-    data.salesperson = salesperson
-    data.customer = customer
-    data.price = price
+    data.vin = state.vin
+    data.salesperson = state.salesperson
+    data.customer = state.customer
+    data.price = state.price
 
     const saleUrl = 'http://localhost:8090/api/sales/'
     const fetchConfig = {
@@ -109,18 +101,11 @@ function SalesForm(props){
     const saleResponse = await fetch(saleUrl, fetchConfig)
     if (saleResponse.ok) {
       const response = await saleResponse.json()
-      handleSoldStatus(vin)
+      handleSoldStatus(state.vin)
       console.log(response)
-
-      setVin("")
-      setSalesperson("")
-      setCustomer("")
-      setPrice("")
+      setState(defaultObj)
     }
   }
-
-
-
 
 
   useEffect(() => {
@@ -135,11 +120,10 @@ function SalesForm(props){
           <div className="shadow p-4 mt-4">
             <h1>Record a new sale</h1>
             <form onSubmit={handleSubmit} id="create-conference-form">
-
               <div className="mb-3">
                 <select
-                  onChange={handleVinChange}
-                  value={vin}
+                  onChange={handleChange}
+                  value={state.vin}
                   required
                   id="vin"
                   name="vin"
@@ -157,8 +141,8 @@ function SalesForm(props){
               </div>
               <div className="mb-3">
                 <select
-                  onChange={handleSalespersonChange}
-                  value={salesperson}
+                  onChange={handleChange}
+                  value={state.salesperson}
                   required
                   id="salesperson"
                   name="salesperson"
@@ -176,8 +160,8 @@ function SalesForm(props){
               </div>
               <div className="mb-3">
                 <select
-                  onChange={handleCustomerChange}
-                  value={customer}
+                  onChange={handleChange}
+                  value={state.customer}
                   required
                   id="customer"
                   name="customer"
@@ -195,8 +179,8 @@ function SalesForm(props){
               </div>
                     <div className="form-floating mb-3">
                       <input
-                        onChange={handlePriceChange}
-                        value={price}
+                        onChange={handleChange}
+                        value={state.price}
                         placeholder="Price"
                         required
                         type="number"

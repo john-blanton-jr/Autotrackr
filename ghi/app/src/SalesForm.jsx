@@ -23,7 +23,6 @@ function SalesForm(props){
     }
   }
 
-
   const fetchSalespeople = async () => {
     const url = 'http://localhost:8090/api/salespeople/'
     const response = await fetch(url)
@@ -84,6 +83,7 @@ function SalesForm(props){
     const response = await fetch(url, fetchConfig);
         if (response.ok) {
         console.log(response);
+
         }
     }
 
@@ -110,6 +110,10 @@ function SalesForm(props){
       const response = await saleResponse.json()
       handleSoldStatus(vin)
       console.log(response);
+      setVin("")
+      setSalesperson("")
+      setCustomer("")
+      setPrice("")
     }
   }
 

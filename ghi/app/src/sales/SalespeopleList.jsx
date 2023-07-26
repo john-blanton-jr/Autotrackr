@@ -25,6 +25,8 @@ function SalespeopleList(props) {
   }
 
     return (
+      <>
+      <h1>Salespeople</h1>
       <table className="table table-striped">
             <thead>
                 <tr>
@@ -45,9 +47,10 @@ function SalespeopleList(props) {
                             </td>
                         </tr>
                     )
-                })}
+                  })}
             </tbody>
         </table>
+      </>
     )
 }
 

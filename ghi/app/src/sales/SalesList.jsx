@@ -15,6 +15,8 @@ function SalesList(props){
       fetchData();
     }, [])
   return (
+    <>
+    <h1>Sales</h1>
     <table className="table table-striped">
           <thead>
               <tr>
@@ -39,6 +41,7 @@ function SalesList(props){
               })}
           </tbody>
       </table>
+    </>
   )
 }
 

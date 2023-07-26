@@ -10,6 +10,7 @@ function SalesForm(props){
   const [customer, setCustomer] = useState('')
   const [price, setPrice] = useState('')
 
+
   const fetchVin = async () => {
     const url = 'http://localhost:8100/api/automobiles/'
     const response = await fetch(url)

@@ -109,7 +109,8 @@ function SalesForm(props){
     if (saleResponse.ok) {
       const response = await saleResponse.json()
       handleSoldStatus(vin)
-      console.log(response);
+      console.log(response)
+
       setVin("")
       setSalesperson("")
       setCustomer("")
@@ -137,7 +138,7 @@ function SalesForm(props){
               <div className="mb-3">
                 <select
                   onChange={handleVinChange}
-                  // value={location}
+                  value={vin}
                   required
                   id="vin"
                   name="vin"
@@ -156,7 +157,7 @@ function SalesForm(props){
               <div className="mb-3">
                 <select
                   onChange={handleSalespersonChange}
-                  // value={location}
+                  value={salesperson}
                   required
                   id="salesperson"
                   name="salesperson"
@@ -175,7 +176,7 @@ function SalesForm(props){
               <div className="mb-3">
                 <select
                   onChange={handleCustomerChange}
-                  // value={location}
+                  value={customer}
                   required
                   id="customer"
                   name="customer"
@@ -194,7 +195,7 @@ function SalesForm(props){
                     <div className="form-floating mb-3">
                       <input
                         onChange={handlePriceChange}
-                        // value={maxAttendees}
+                        value={price}
                         placeholder="Price"
                         required
                         type="number"

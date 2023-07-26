@@ -1,39 +1,33 @@
 import React, {useState} from 'react';
 
 function CustomerForm(){
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [address, setAddress] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
 
-  const HandleFirstNameChange = (event) => {
-    const value = event.target.value;
-    setFirstName(value);
+  const defaultObj = {
+    firstName: "",
+    lastName: "",
+    address: "",
+    phoneNumber: ""
   }
 
-  const HandleLastNameChange = (event) => {
-    const value = event.target.value;
-    setLastName(value);
+  const [state, setState] = useState(defaultObj)
+
+  const handleChange = evt => {
+    const value = evt.target.value
+    setState({
+      ...state,
+      [evt.target.name]: value,
+    })
   }
 
-  const HandleAddressChange = (event) => {
-    const value = event.target.value;
-    setAddress(value);
-  }
-
-  const HandlePhoneNumberChange = (event) => {
-    const value = event.target.value;
-    setPhoneNumber(value);
-  }
 
   const HandleSubmit= async (event) => {
     event.preventDefault()
 
     const data = {}
-    data.first_name = firstName
-    data.last_name = lastName
-    data.address = address
-    data.phone_number = phoneNumber
+    data.first_name = state.firstName
+    data.last_name = state.lastName
+    data.address = state.address
+    data.phone_number = state.phoneNumber
 
     const hatUrl = "http://localhost:8090/api/customers/";
     const fetchConfig = {
@@ -45,10 +39,7 @@ function CustomerForm(){
     };
     const response = await fetch(hatUrl, fetchConfig);
     if (response.ok) {
-      setFirstName("");
-      setLastName("");
-      setAddress("");
-      setPhoneNumber("");
+      setState(defaultObj)
     }
   };
 
@@ -61,8 +52,8 @@ function CustomerForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="First Name"
-              onChange={HandleFirstNameChange}
-              value={firstName}
+              onChange={handleChange}
+              value={state.firstName}
               required
               type="text"
               name="firstName"
@@ -74,8 +65,8 @@ function CustomerForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="Last Name"
-              onChange={HandleLastNameChange}
-              value={lastName}
+              onChange={handleChange}
+              value={state.lastName}
               required
               type="text"
               name="lastName"
@@ -87,8 +78,8 @@ function CustomerForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="Address"
-              value={address}
-              onChange={HandleAddressChange}
+              value={state.address}
+              onChange={handleChange}
               required
               type="text"
               className="form-control"
@@ -100,8 +91,8 @@ function CustomerForm(){
           <div className="form-floating mb-3">
             <input
               placeholder="Phone Number"
-              value={phoneNumber}
-              onChange={HandlePhoneNumberChange}
+              value={state.phoneNumber}
+              onChange={handleChange}
               required
               type="text"
               className="form-control"

@@ -78,7 +78,7 @@ function SalesForm(props){
       headers: {
         "Content-Type": "application/json",
       },
-    };
+    }
 
     const response = await fetch(url, fetchConfig);
         if (response.ok) {

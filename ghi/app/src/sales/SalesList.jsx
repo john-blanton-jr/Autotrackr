@@ -11,15 +11,6 @@ function SalesList(props){
       }
     }
 
-    const deleteSale = async (id) => {
-      const response = await fetch(`http://localhost:8090/api/sales/${id}`, {
-          method: 'DELETE'
-      });
-      if (response.ok) {
-        fetchData();
-      }
-  }
-
     useEffect(() => {
       fetchData();
     }, [])
@@ -43,9 +34,6 @@ function SalesList(props){
                           <td>{ sale.customer.first_name } { sale.customer.last_name }</td>
                           <td>{ sale.automobile.vin }</td>
                           <td>${ sale.price }</td>
-                          <td>
-                              <button onClick={() => deleteSale(sale.id)} className="btn btn-outline-danger btn-sm">Delete Sale</button>
-                          </td>
                       </tr>
                   )
               })}

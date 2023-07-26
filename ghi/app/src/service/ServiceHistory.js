@@ -29,7 +29,7 @@ function ServiceHistory() {
     <>
       <h1 style={{ textAlign: "center" }}>Vin Search</h1>
       <div className="container">
-        <form onSubmit={handleSearch} id="create-technician-form">
+        <form onSubmit={handleSearch} id="Vin Search">
           <div className="form-floating mb-3 input-group">
             <input onChange={event => setInputVin(event.target.value)} value={inputVin} placeholder="VIN Number" type="text" name="vin" id="vin"
               className="form-control" />

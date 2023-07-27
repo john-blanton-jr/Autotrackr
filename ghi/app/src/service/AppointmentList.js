@@ -39,7 +39,6 @@ function AppointmentList() {
                         <th>Customer Name</th>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Technician ID</th>
                         <th>Technician Name</th>
                         <th>Reason</th>
                         <th>Status</th>
@@ -54,7 +53,6 @@ function AppointmentList() {
                                 <td>{appointments.customer_name}</td>
                                 <td>{appointments.date}</td>
                                 <td>{appointments.time}</td>
-                                <td>{appointments.technician.employee_id}</td>
                                 <td>{appointments.technician.first_name} {appointments.technician.last_name}</td>
                                 <td>{appointments.reason}</td>
                                 <td>

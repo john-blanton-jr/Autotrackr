@@ -79,7 +79,7 @@ def appt_details(request, id):
                 {"appointment": appointment}, encoder=ApptListEncoder
             )
         except Appointment.DoesNotExist:
-            return JsonResponse({"message": "Appointment does not exist, check id"})
+            return JsonResponse({"message": "Appointment does not exist"})
     elif request.method == "DELETE":
         try:
             appointment = Appointment.objects.get(id=id)

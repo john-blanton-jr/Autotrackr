@@ -16,7 +16,7 @@ function SalesForm(props){
   const [state, setState] = useState(defaultObj)
 
   const handleChange = evt => {
-    const value = evt.target.valuehandleChange
+    const value = evt.target.value
     setState({
       ...state,
       [evt.target.name]: value,
@@ -131,6 +131,7 @@ function SalesForm(props){
                 >
                   <option value="">Automobile VIN</option>
                   {vins.map(vin => {
+                    console.log(vin.vin);
                     return (
                       <option key={vin.id} value={vin.vin}>
                       {vin.vin} / {vin.model.manufacturer.name} {vin.model.name} / {vin.year} / {vin.color}

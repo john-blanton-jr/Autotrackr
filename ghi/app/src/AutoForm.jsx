@@ -62,9 +62,6 @@ function AutoForm(){
     }
     const autoResponse = await fetch(autoUrl, fetchConfig);
     if (autoResponse.ok) {
-      // const response = await autoResponse.json()
-      // console.log(response)
-
       setColor("")
       setYear("")
       setVin("")

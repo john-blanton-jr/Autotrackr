@@ -4,21 +4,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('sales_rest', '0003_alter_automobilevo_vin'),
+        ("sales_rest", "0003_alter_automobilevo_vin"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customer',
-            name='phone_number',
+            model_name="customer",
+            name="phone_number",
             field=models.CharField(default=1, max_length=20),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='customer',
-            name='address',
+            model_name="customer",
+            name="address",
             field=models.CharField(max_length=200),
         ),
     ]

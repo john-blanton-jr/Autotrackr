@@ -3,31 +3,30 @@ import React, { useState, useEffect } from 'react';
 
 
 function ServiceHistory() {
-  const [servicesData, setService] = useState([]);
+  const [appointmentsData, setAppointment] = useState([]);
   const [inputVin, setInputVin] = useState("");
   const [vin, setVin] = useState([]);
 
 
-  const fetchService = async () => {
+  const fetchAppointment = async () => {
     const url = 'http://localhost:8080/api/appointments/';
     const response = await fetch(url)
-    const servicesJson = await response.json();
-    setService(servicesJson.services)
+    const appointmentsJson = await response.json();
+    setAppointment(appointmentsJson.appointments);
   }
   useEffect(() => {
-    fetchService()
+    fetchAppointment()
   }, []);
 
   const handleSearch = (event) => {
     event.preventDefault();
-    const searchedVin = servicesData.filter(service => service.vin === inputVin);
-    console.log("input ", searchedVin)
+    const searchedVin = appointmentsData.filter(appointment => appointment.vin === inputVin);
     setVin(searchedVin);
   }
 
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Vin Search</h1>
+      <h1 style={{ textAlign: "center" }}>VIN Search</h1>
       <div className="container">
         <form onSubmit={handleSearch} id="Vin Search">
           <div className="form-floating mb-3 input-group">
@@ -51,16 +50,16 @@ function ServiceHistory() {
           </thead>
 
           <tbody>
-            {vin.map((service) => {
+            {vin.map((appointment) => {
               return (
-                <tr key={service.id}>
-                  <td>{service.vin}</td>
-                  <td>{service.vip}</td>
-                  <td>{service.owner_name}</td>
-                  <td>{new Date(service.appointment).toLocaleDateString()}</td>
-                  <td>{new Date(service.appointment).toLocaleTimeString()}</td>
-                  <td>{service.tech_name.tech_name}</td>
-                  <td>{service.service_name}</td>
+                <tr key={appointment.id}>
+                  <td>{appointment.vin}</td>
+                  <td>{appointment.vip ? "Yes" : "No"}</td>
+                  <td>{appointment.customer_name}</td>
+                  <td>{new Date(appointment.date).toLocaleDateString()}</td>
+                  <td>{appointment.time}</td>
+                  <td>{appointment.technician.first_name} {appointment.technician.last_name}</td>
+                  <td>{appointment.reason}</td>
                 </tr>
               )
             })}

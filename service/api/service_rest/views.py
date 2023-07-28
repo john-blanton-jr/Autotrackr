@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
-import json
 from .encoders import TechEncoder, ApptListEncoder
 from .models import AutomobileVO, Appointment, Technician
+import json
 
 
 @require_http_methods(["GET", "POST"])
@@ -23,6 +23,7 @@ def tech_list(request):
             response = JsonResponse({"message": "Could not create the tech"})
             response.status_code = 400
             return response
+
 
 @require_http_methods(["DELETE", "GET"])
 def show_tech(request, id):

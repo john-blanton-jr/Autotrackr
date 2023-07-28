@@ -81,7 +81,7 @@ const AppointmentForm = () => {
 								id="vin"
 								className="form-control"
 							/>
-							<label htmlFor="vin">Vin Number</label>
+							<label htmlFor="vin">VIN Number</label>
 						</div>
 
                         <div className="form-floating mb-3">

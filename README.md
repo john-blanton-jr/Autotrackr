@@ -38,7 +38,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -129,17 +128,11 @@ Install Docker
    docker-compose up
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Can be used or adapted any way you would like. Feel free to clone and change it up to your specifications. 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
@@ -147,17 +140,12 @@ Can be used or adapted any way you would like. Feel free to clone and change it 
 
 No roadmap or future support planned.  Any questions feel free to send me an email hello@johnblanton.com.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -167,7 +155,6 @@ John Blanton - hello@johnblanton.com
 
 Project Link: [https://gitlab.com/johnbjr76/react_vite_django_template](https://gitlab.com/johnbjr76/react_vite_django_template)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments

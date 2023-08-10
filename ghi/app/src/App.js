@@ -19,34 +19,43 @@ import ModelsList from './ModelsList';
 import ModelForm from './ModelForm';
 import AutoList from './AutoList';
 import AutoForm from './AutoForm';
+import TopNav from './TopNav';
+
+import Background from "./assets/background.jpg"
 
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/appointments" element={<AppointmentList />} />
-          <Route path="/appointments/new" element={<AppointmentForm />} />
-          <Route path="/service_history" element={<ServiceHistory />} />
-          <Route path="/technicians/" element={<TechList />} />
-          <Route path="/technicians/new" element={<TechForm />} />
-          <Route path="salespeople" element={<SalespeopleList />} />
-          <Route path="salespeople/create" element={<SalespersonForm />} />
-          <Route path="customers" element={<CustomerList />} />
-          <Route path="customers/create" element={<CustomerForm />} />
-          <Route path="sales" element={<SalesList />} />
-          <Route path="sales/create" element={<SalesForm />} />
-          <Route path="sales/history" element={<SalespersonHistory />} />
-          <Route path="/manufacturers" element={<ManufacturerList />} />
-          <Route path="/manufacturers/new" element={<NewManufacturer />} />
-          <Route path="/models" element={<ModelsList />} />
-          <Route path="models/create" element={<ModelForm />} />
-          <Route path="automobiles/" element={<AutoList />} />
-          <Route path="automobiles/create" element={<AutoForm />} />
-        </Routes>
+      <TopNav />
+      <div className='d-flex min-vw-100 bg-secondary'>
+        <div className=''>
+          <Nav />
+        </div>
+        <div className="w-100 min-vh-100" style={{ backgroundImage: `url(${Background})`}}>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/appointments" element={<AppointmentList />} />
+            <Route path="/appointments/new" element={<AppointmentForm />} />
+            <Route path="/service_history" element={<ServiceHistory />} />
+            <Route path="/technicians/" element={<TechList />} />
+            <Route path="/technicians/new" element={<TechForm />} />
+            <Route path="salespeople" element={<SalespeopleList />} />
+            <Route path="salespeople/create" element={<SalespersonForm />} />
+            <Route path="customers" element={<CustomerList />} />
+            <Route path="customers/create" element={<CustomerForm />} />
+            <Route path="sales" element={<SalesList />} />
+            <Route path="sales/create" element={<SalesForm />} />
+            <Route path="sales/history" element={<SalespersonHistory />} />
+            <Route path="/manufacturers" element={<ManufacturerList />} />
+            <Route path="/manufacturers/new" element={<NewManufacturer />} />
+            <Route path="/models" element={<ModelsList />} />
+            <Route path="models/create" element={<ModelForm />} />
+            <Route path="automobiles/" element={<AutoList />} />
+            <Route path="automobiles/create" element={<AutoForm />} />
+          </Routes>
+        </div>
       </div>
+  
     </BrowserRouter>
   );
 }

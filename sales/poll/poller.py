@@ -16,7 +16,7 @@ def poll(repeat=True):
         print("Sales poller polling for data")
         try:
             response = requests.get(
-                "http://project-beta-inventory-api-1:8000/api/automobiles/"
+                "http://Autotrackr-inventory-api-1:8000/api/automobiles/"
             )
             content = json.loads(response.content)
             for automobile in content["autos"]:
@@ -30,7 +30,7 @@ def poll(repeat=True):
         if not repeat:
             break
 
-        time.sleep(60)
+        time.sleep(10)
 
 
 if __name__ == "__main__":

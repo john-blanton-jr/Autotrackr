@@ -42,7 +42,9 @@ function SalespersonHistory(){
 }, []);
 
   return (
-    <>
+    <div className="d-flex justify-content-center">
+    <div className="col mx-5">
+      <div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
     <h1>Salesperson History</h1>
     <select onChange={handleSalespersonChange} value={salesperson} required name="salesperson" id="salesperson" className="form-select">
         <option value="">Choose a salesperson</option>
@@ -78,7 +80,9 @@ function SalespersonHistory(){
               })}
           </tbody>
       </table>
-    </>
+      </div>
+        </div>
+      </div>
   )
 }
 

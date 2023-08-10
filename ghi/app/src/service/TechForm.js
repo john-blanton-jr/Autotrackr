@@ -53,11 +53,10 @@ class TechForm extends React.Component {
 
   render() {
     return (
-      <>
-        <div className="row">
-          <div className="offset-3 col-6">
-            <div className="shadow p-4 mt-4">
-              <h1 style={{ textAlign: "center" }}>Add a Technician</h1>
+      <div className="d-flex justify-content-center">
+    <div className="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+      <div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
+              <h1>Add a Technician</h1>
               <form onSubmit={this.handleSubmit} id="create-technician-form">
                 <div className="form-floating mb-3">
                   <input 
@@ -100,7 +99,6 @@ class TechForm extends React.Component {
             </div>
           </div>
         </div>
-      </>
     )
   }
 }

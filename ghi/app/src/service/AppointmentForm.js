@@ -65,9 +65,9 @@ const AppointmentForm = () => {
 
 
 	return (
-		<div className="row">
-			<div className="offset-3 col-6">
-				<div className="shadow p-4 mt-4">
+		<div className="d-flex justify-content-center">
+    		<div className="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+      			<div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
 					<h1 className="text-center">Create a New Appointment</h1>
 					<form id="create-appointment-form" onSubmit={handleSubmit}>
 						<div className="form-floating mb-3">

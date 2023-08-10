@@ -115,9 +115,9 @@ function SalesForm(props){
   }, [])
 
   return (
-    <div className="row">
-        <div className="offset-3 col-6">
-          <div className="shadow p-4 mt-4">
+    <div className="d-flex justify-content-center">
+    <div className="col-10 col-sm-8 col-lg-6 col-xl-4">
+      <div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
             <h1>Record a new sale</h1>
             <form onSubmit={handleSubmit} id="create-conference-form">
               <div className="mb-3">

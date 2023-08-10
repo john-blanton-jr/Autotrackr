@@ -25,7 +25,9 @@ function SalespeopleList(props) {
   }
 
     return (
-      <>
+      <div className="d-flex justify-content-center">
+    <div className="col mx-5">
+      <div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
       <h1>Salespeople</h1>
       <table className="table table-striped">
             <thead>
@@ -50,7 +52,9 @@ function SalespeopleList(props) {
                   })}
             </tbody>
         </table>
-      </>
+        </div>
+        </div>
+      </div>
     )
 }
 

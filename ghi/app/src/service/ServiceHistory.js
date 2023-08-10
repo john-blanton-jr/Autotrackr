@@ -25,7 +25,9 @@ function ServiceHistory() {
   }
 
   return (
-    <>
+    <div className="d-flex justify-content-center">
+    <div className="col mx-5">
+      <div className="shadow-lg p-4 mt-5 bg-light rounded border border-2 border-warning">
       <h1 style={{ textAlign: "center" }}>VIN Search</h1>
       <div className="container">
         <form onSubmit={handleSearch} id="Vin Search">
@@ -66,7 +68,9 @@ function ServiceHistory() {
           </tbody>
         </table>
       </div>
-    </>
+      </div>
+      </div>
+      </div>
   )
 }
 

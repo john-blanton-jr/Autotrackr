@@ -58,11 +58,13 @@ Autotrackr is a comprehensive application designed to manage various facets of a
 
 **Front-end Integration**: A React-based interface that interacts with the Inventory API, allowing users to view and manage the inventory seamlessly.
 <br>
+<br>
 ### Service Center Management:
 
 **Service API**: Handles the creation and management of automobile service appointments.
 
 **Service Poller**: Integrates with other services to ensure real-time updates and synchronization.
+<br>
 <br>
 ### Sales Management:
 
@@ -70,11 +72,14 @@ Autotrackr is a comprehensive application designed to manage various facets of a
 
 **Sales Poller**: Facilitates integration with other services, ensuring up-to-date sales information.
 <br>
+<br>
 ### Database: 
 A robust PostgreSQL database that stores data for all microservices, ensuring data integrity and reliability.
 <br>
+<br>
 ### Collaborative Development:
 The project was developed in pairs, with each member taking responsibility for specific microservices and their corresponding front-end components.
+<br>
 <br>
 ## Development Process
 

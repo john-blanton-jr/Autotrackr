@@ -52,7 +52,7 @@
 Autotrackr is a comprehensive application designed to manage various facets of an automobile dealership. The core functionalities encompass inventory management, service center appointments, and sales tracking. Built using Django and React, Autotrackr showcases the power of microservices architecture and RESTful APIs.
 
 ## Features
-### Inventory Management:
+<ins>### Inventory Management:</ins>
 
 **Inventory API**: A RESTful API that offers endpoints for Manufacturer, VehicleModel, and Automobile data.
 

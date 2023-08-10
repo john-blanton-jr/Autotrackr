@@ -81,6 +81,8 @@ Both developers collaborated on the Inventory service's front-end implementation
 React components were developed to display specific resources (service or sales) and provide forms for data creation. Additional components were created for related resources, such as salespeople, customers, technicians, and service appointments.
 The RESTful APIs for each service were designed to support POST and GET endpoints at a minimum, with the option to include DELETE endpoints for enhanced development flexibility.
 
+
+
 ![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles"){: .shadow}
 ![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles"){: .shadow}
 ![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles"){: .shadow}

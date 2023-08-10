@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://gitlab.com/johnbjr76/Autotrackr">
-    <img src="images/autotrackr.png" alt="Logo" width="100">
+    <img src="images/autotrackr.png" alt="Logo" height="50">
   </a>
 
   <h3 align="center">Automobile Dealership Management System</h3>
@@ -80,13 +80,13 @@ Team members chose specific microservices to implement. One focused on the Servi
 Both developers collaborated on the Inventory service's front-end implementation.
 React components were developed to display specific resources (service or sales) and provide forms for data creation. Additional components were created for related resources, such as salespeople, customers, technicians, and service appointments.
 The RESTful APIs for each service were designed to support POST and GET endpoints at a minimum, with the option to include DELETE endpoints for enhanced development flexibility.
-
-
-
-![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles"){: .shadow}
-![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles"){: .shadow}
-![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles"){: .shadow}
-![react vite django files screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles"){: .shadow}
+<br>
+<br>
+<br>
+![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles")
+![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles")
+![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles")
+![react vite django files screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

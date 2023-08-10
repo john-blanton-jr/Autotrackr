@@ -55,16 +55,19 @@ Autotrackr is a comprehensive application designed to manage various facets of a
 ### Inventory Management:
 
 **Inventory API**: A RESTful API that offers endpoints for Manufacturer, VehicleModel, and Automobile data.
+
 **Front-end Integration**: A React-based interface that interacts with the Inventory API, allowing users to view and manage the inventory seamlessly.
 
 ### Service Center Management:
 
 **Service API**: Handles the creation and management of automobile service appointments.
+
 **Service Poller**: Integrates with other services to ensure real-time updates and synchronization.
 
 ### Sales Management:
 
 **Sales API**: Manages sales data, including transactions, salespeople, and customer details.
+
 **Sales Poller**: Facilitates integration with other services, ensuring up-to-date sales information.
 
 ### Database: 

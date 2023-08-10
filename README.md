@@ -55,25 +55,35 @@ Autotrackr is a comprehensive application designed to manage various facets of a
 ### Inventory Management:
 
 **Inventory API**: A RESTful API that offers endpoints for Manufacturer, VehicleModel, and Automobile data.
-Front-end Integration: A React-based interface that interacts with the Inventory API, allowing users to view and manage the inventory seamlessly.
-Service Center Management:
+**Front-end Integration**: A React-based interface that interacts with the Inventory API, allowing users to view and manage the inventory seamlessly.
+
+### Service Center Management:
 
 **Service API**: Handles the creation and management of automobile service appointments.
-Service Poller: Integrates with other services to ensure real-time updates and synchronization.
-Sales Management:
+**Service Poller**: Integrates with other services to ensure real-time updates and synchronization.
+
+### Sales Management:
 
 **Sales API**: Manages sales data, including transactions, salespeople, and customer details.
-Sales Poller: Facilitates integration with other services, ensuring up-to-date sales information.
-Database: A robust PostgreSQL database that stores data for all microservices, ensuring data integrity and reliability.
+**Sales Poller**: Facilitates integration with other services, ensuring up-to-date sales information.
 
-**Collaborative Development**: The project was developed in pairs, with each member taking responsibility for specific microservices and their corresponding front-end components.
+### Database: 
+A robust PostgreSQL database that stores data for all microservices, ensuring data integrity and reliability.
+
+### Collaborative Development:
+The project was developed in pairs, with each member taking responsibility for specific microservices and their corresponding front-end components.
 
 ## Development Process
-The project started with a scaffold of microservices, a front-end application, and a database.
-Team members chose specific microservices to implement. One focused on the Service microservice (including its API, poller, and React components), while the other tackled the Sales microservice.
-Both developers collaborated on the Inventory service's front-end implementation.
-React components were developed to display specific resources (service or sales) and provide forms for data creation. Additional components were created for related resources, such as salespeople, customers, technicians, and service appointments.
-The RESTful APIs for each service were designed to support POST and GET endpoints at a minimum, with the option to include DELETE endpoints for enhanced development flexibility.
+
+- The project started with a scaffold of microservices, a front-end application, and a database.
+
+- Team members chose specific microservices to implement. One focused on the Service microservice (including its API, poller, and React components), while the other tackled the Sales microservice.
+
+- Both developers collaborated on the Inventory service's front-end implementation.
+
+- React components were developed to display specific resources (service or sales) and provide forms for data creation. Additional components were created for related resources, such as salespeople, customers, technicians, and service appointments.
+
+- The RESTful APIs for each service were designed to support POST and GET endpoints at a minimum, with the option to include DELETE endpoints for enhanced development flexibility.
 <br>
 <br>
 <br>
@@ -91,7 +101,9 @@ The RESTful APIs for each service were designed to support POST and GET endpoint
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 * ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+* ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 * ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+* ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 * ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 

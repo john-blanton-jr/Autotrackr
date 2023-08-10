@@ -54,37 +54,37 @@
 ## About The Project
 
 
-##Overview
+## Overview
 Autotrackr is a comprehensive application designed to manage various facets of an automobile dealership. The core functionalities encompass inventory management, service center appointments, and sales tracking. Built using Django and React, Autotrackr showcases the power of microservices architecture and RESTful APIs.
 
-##Features
-Inventory Management:
+## Features
+### Inventory Management:
 
-Inventory API: A RESTful API that offers endpoints for Manufacturer, VehicleModel, and Automobile data.
+**Inventory API**: A RESTful API that offers endpoints for Manufacturer, VehicleModel, and Automobile data.
 Front-end Integration: A React-based interface that interacts with the Inventory API, allowing users to view and manage the inventory seamlessly.
 Service Center Management:
 
-Service API: Handles the creation and management of automobile service appointments.
+**Service API**: Handles the creation and management of automobile service appointments.
 Service Poller: Integrates with other services to ensure real-time updates and synchronization.
 Sales Management:
 
-Sales API: Manages sales data, including transactions, salespeople, and customer details.
+**Sales API**: Manages sales data, including transactions, salespeople, and customer details.
 Sales Poller: Facilitates integration with other services, ensuring up-to-date sales information.
 Database: A robust PostgreSQL database that stores data for all microservices, ensuring data integrity and reliability.
 
-Collaborative Development: The project was developed in pairs, with each member taking responsibility for specific microservices and their corresponding front-end components.
+**Collaborative Development**: The project was developed in pairs, with each member taking responsibility for specific microservices and their corresponding front-end components.
 
-Development Process
+## Development Process
 The project started with a scaffold of microservices, a front-end application, and a database.
 Team members chose specific microservices to implement. One focused on the Service microservice (including its API, poller, and React components), while the other tackled the Sales microservice.
 Both developers collaborated on the Inventory service's front-end implementation.
 React components were developed to display specific resources (service or sales) and provide forms for data creation. Additional components were created for related resources, such as salespeople, customers, technicians, and service appointments.
 The RESTful APIs for each service were designed to support POST and GET endpoints at a minimum, with the option to include DELETE endpoints for enhanced development flexibility.
 
-![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles")
+![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles"){: .shadow}
+![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles"){: .shadow}
+![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles"){: .shadow}
+![react vite django files screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles"){: .shadow}
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

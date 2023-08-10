@@ -95,20 +95,19 @@ The project was developed in pairs, with each member taking responsibility for s
 <br>
 <br>
 <br>
-![react vite django files screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles")
-![react vite django files screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles")
+![Autotrackr screenshot](/images/Autotracker_screenshot_01.png "Boilerplate FIles")
+![Autotrackr screenshot](/images/Autotracker_screenshot_02.png "Boilerplate FIles")
+![Autotrackr screenshot](/images/Autotracker_screenshot_03.png "Boilerplate FIles")
+![Autotrackr screenshot](/images/Autotracker_screenshot_04.png "Boilerplate FIles")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
+## Built With
 
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-* ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 * ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 * ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 * ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -173,7 +172,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 John Blanton - hello@johnblanton.com
 
-Project Link: [https://gitlab.com/johnbjr76/react_vite_django_template](https://gitlab.com/johnbjr76/react_vite_django_template)
+Project Link: [https://gitlab.com/johnbjr76/Autotrackr](https://gitlab.com/johnbjr76/Autotrackr)
 
 
 <!-- ACKNOWLEDGMENTS -->

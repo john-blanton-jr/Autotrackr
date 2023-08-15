@@ -11,7 +11,7 @@
   <h3 align="center">Automobile Dealership Management System</h3>
 
   <p align="center">
-    Group Project From Bootcamp
+    Group Project From HackReactor
     <br />
     <br />
   </p>

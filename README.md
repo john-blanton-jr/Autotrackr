@@ -95,10 +95,11 @@ The project was developed in pairs, with each member taking responsibility for s
 <br>
 <br>
 <br>
-![Autotrackr screenshot](/images/Autotracker_screenshot_01.png")
-![Autotrackr screenshot](/images/Autotracker_screenshot_02.png")
-![Autotrackr screenshot](/images/Autotracker_screenshot_03.png")
-![Autotrackr screenshot](/images/Autotracker_screenshot_04.png")
+<img src="/images/Autotracker_screenshot_01.png" alt="Autotrackr screenshot" title="Boilerplate FIles">
+<img src="/images/Autotracker_screenshot_02.png" alt="Autotrackr screenshot" title="Boilerplate FIles">
+<img src="/images/Autotracker_screenshot_03.png" alt="Autotrackr screenshot" title="Boilerplate FIles">
+<img src="/images/Autotracker_screenshot_04.png" alt="Autotrackr screenshot" title="Boilerplate FIles">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
